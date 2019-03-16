@@ -9,7 +9,7 @@ import (
 	"strings"
 
 	"github.com/sirupsen/logrus"
-	"github.com/xdsxc/txsh/internal/config"
+	"github.com/xdsxc/txtsh/internal/config"
 )
 
 type APIError struct {
