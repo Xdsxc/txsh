@@ -9,9 +9,9 @@ import (
 	"syscall"
 
 	"github.com/sirupsen/logrus"
-	"github.com/xdsxc/txsh/internal/config"
-	"github.com/xdsxc/txsh/internal/shell"
-	"github.com/xdsxc/txsh/internal/twilio"
+	"github.com/xdsxc/txtsh/internal/config"
+	"github.com/xdsxc/txtsh/internal/shell"
+	"github.com/xdsxc/txtsh/internal/twilio"
 )
 
 var manager *shell.SessionManager
@@ -23,7 +23,7 @@ func SMSCallBack(id, body string) string {
 	})
 
 	var retMsg string
-	if strings.HasPrefix(body, "txsh") {
+	if strings.HasPrefix(body, "txtsh") {
 		retMsg = AdminMenuCallback(id, body)
 	} else {
 		session, err := manager.GetSession(id)
